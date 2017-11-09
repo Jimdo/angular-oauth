@@ -229,7 +229,7 @@ angular.module('angularOauth', []).
       return obj;
     }
 
-    var queryString = $location.path().substring(1);  // preceding slash omitted
+    var queryString = $location.hash();
     var params = parseKeyValue(queryString);
 
     // TODO: The target origin should be set to an explicit origin.  Otherwise, a malicious site that can receive
